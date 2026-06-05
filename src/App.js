@@ -116,7 +116,7 @@ function App() {
       <div style={styles.topbar}>
         <div style={{display:'flex',alignItems:'center',gap:8}}>
           <div style={{fontSize:20,width:32,height:32,borderRadius:8,background:'linear-gradient(135deg,#c9a227,#e8b93a)',display:'flex',alignItems:'center',justifyContent:'center'}}>💎</div>
-          <span style={{fontSize:18,fontWeight:700,color:'#f0f4ff'}}>Inq<span style={styles.gold}>aba</span></span>
+          <span style={{fontSize:18,fontWeight:700,color:'#f0f4ff'}}>Inc<span style={styles.gold}>aba</span></span>
         </div>
         
         <div style={{display:'flex',alignItems:'center',gap:8}}>
