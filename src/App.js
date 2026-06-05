@@ -17,7 +17,7 @@ const T = {
     welcomeSub:'Discover breathtaking landscapes, vibrant culture, and unforgettable experiences.',
     attractions:'Attractions', restaurants:'Restaurants', hotels:'Hotels',
     topAttractions:'Top Attractions', hiddenGem:'Hidden Gem 💎',
-    aiTitle:'Inqaba AI Guide', aiSub:'Ask anything about Eswatini',
+    aiTitle:'Incaba AI Guide', aiSub:'Ask anything about Eswatini',
     navigate:'Navigate', home:'Home', ai:'AI Guide', dash:'Dashboard', business:'Business',
     sos:'SOS Emergency Mode', sosSub:'Tap to share location with emergency services',
     weather:'Weather Today', currency:'Currency Converter',
@@ -31,11 +31,11 @@ const T = {
   ss: {
     explore:'Hlola Eswatini ✦', tagline:'Sivula Tigugu Letifihlekile Tase-Eswatini',
     sub:'Inhlelo Lehlakaniphile Yekuvakasha 🇸🇿', offline:'siSwati · English · Isebenta Ungaxhunyiwe',
-    welcome:'Siyakemukela e-Africa Inqaba Lefihlekile 💎',
+    welcome:'Siyakemukela e-Africa Incaba Lefihlekile 💎',
     welcomeSub:'Tola tindzawo letimangalisako, inhlalo-mphilo, netilwimi letingakhohlwakali.',
     attractions:'Tindzawo', restaurants:'Emadlelo', hotels:'Emahhotela',
     topAttractions:'Tindzawo Letiphambili', hiddenGem:'Sigugu Lesikhulu 💎',
-    aiTitle:'Umcondzi we-Inqaba AI', aiSub:'Butseka noma yini nge-Eswatini',
+    aiTitle:'Umcondzi we-Incaba AI', aiSub:'Butseka noma yini nge-Eswatini',
     navigate:'Hamba', home:'Ekhaya', ai:'Umcondzi', dash:'Ibalabala', business:'Ibhizinisi',
     sos:'Isimo Sehhatsi', sosSub:'Cindzetela wabelane ndzawo yakho nebaphephisi',
     weather:'Isimo Selizulu Lamuhla', currency:'Shintsha Imali',
@@ -92,7 +92,7 @@ function App() {
       <div style={styles.splash}>
         <div style={styles.splashGlow} />
         <div style={{fontSize:72,marginBottom:16}}>💎</div>
-        <h1 style={styles.splashTitle}>Inq<span style={styles.gold}>aba</span></h1>
+        <h1 style={styles.splashTitle}>Inc<span style={styles.gold}>aba</span></h1>
         <div style={{fontSize:15,color:'#c9a227',fontWeight:600,marginBottom:8}}>{t.tagline}</div>
         <p style={{color:'#8fa3c4',fontSize:13,margin:'0 0 20px',lineHeight:1.6}}>{t.sub}</p>
         <div style={{display:'flex',gap:8,justifyContent:'center',marginBottom:28}}>
@@ -118,6 +118,7 @@ function App() {
           <div style={{fontSize:20,width:32,height:32,borderRadius:8,background:'linear-gradient(135deg,#c9a227,#e8b93a)',display:'flex',alignItems:'center',justifyContent:'center'}}>💎</div>
           <span style={{fontSize:18,fontWeight:700,color:'#f0f4ff'}}>Inq<span style={styles.gold}>aba</span></span>
         </div>
+        
         <div style={{display:'flex',alignItems:'center',gap:8}}>
           <span style={{...styles.langBtn,...(lang==='en'?styles.langBtnActive:{})}} onClick={()=>setLang('en')}>EN</span>
           <span style={{...styles.langBtn,...(lang==='ss'?styles.langBtnActive:{})}} onClick={()=>setLang('ss')}>SS</span>
@@ -644,7 +645,7 @@ function MapTab({t}) {
 // ── AI TAB ────────────────────────────────────────────────
 function AITab({t}) {
   const [messages,setMessages] = useState([
-    {role:'ai',text:"Sawubona! 👋 I'm Vaka, your Inqaba AI Guide for Eswatini.\n\nI can help you with:\n• 🗓 Trip planning\n• 🦁 Wildlife & nature\n• 🍽 Food & restaurants\n• 🎭 Culture & festivals\n• 💱 Currency & weather\n• 🆘 Emergency help\n\nWhat would you like to know?"}
+    {role:'ai',text:"Sawubona! 👋 I'm Vaka, your Incaba AI Guide for Eswatini.\n\nI can help you with:\n• 🗓 Trip planning\n• 🦁 Wildlife & nature\n• 🍽 Food & restaurants\n• 🎭 Culture & festivals\n• 💱 Currency & weather\n• 🆘 Emergency help\n\nWhat would you like to know?"}
   ]);
   const [input,setInput]   = useState('');
   const [typing,setTyping] = useState(false);
@@ -661,7 +662,7 @@ function AITab({t}) {
     if(m.includes('thank')||m.includes('thanks')||m.includes('ngiyabonga')) return "You are very welcome! 😊 It is my pleasure to help you discover the beauty of Eswatini. Is there anything else you would like to know? 🇸🇿💎";
     if(m.includes('goodbye')||m.includes('bye')) return "Goodbye! 👋 Sala kahle — stay well in siSwati! I hope you have an amazing time exploring the Kingdom of Eswatini. Come back anytime! 💎🇸🇿";
     if(m.includes('how are you')) return "I am doing wonderfully, thank you for asking! 😊 I am always happy when I get to talk about the beautiful Kingdom of Eswatini. How can I help you today?";
-    if(m.includes('who are you')||m.includes('what are you')) return "I am Vaka — your AI-powered travel guide built specifically for Eswatini! 🤖\n\nI was created to help tourists discover:\n• Hidden gems across all 4 regions\n• Best places to eat and stay\n• Cultural traditions and festivals\n• Emergency support and safety\n\nI am part of the Inqaba Smart Tourism Platform. 💎";
+    if(m.includes('who are you')||m.includes('what are you')) return "I am Vaka — your AI-powered travel guide built specifically for Eswatini! 🤖\n\nI was created to help tourists discover:\n• Hidden gems across all 4 regions\n• Best places to eat and stay\n• Cultural traditions and festivals\n• Emergency support and safety\n\nI am part of the Incaba Smart Tourism Platform. 💎";
     if(m.includes('trip')||m.includes('plan')||m.includes('itinerary')) return "Here is your perfect 2-day Eswatini adventure! 🗓\n\nDay 1 — Wildlife & Nature\n• 6am: Sunrise at Sibebe Rock\n• 9am: Hlane Royal Reserve (lions, elephants, rhinos!)\n• 1pm: Lunch at Malandela's Restaurant\n• 3pm: Mantenga Falls (95m waterfall)\n• 6pm: Sunset at Lobamba Village\n\nDay 2 — Culture & Craft\n• 8am: Lobamba National Museum\n• 11am: Swazi Candles Market\n• 2pm: Malolotja Nature Reserve\n• 5pm: Traditional Swazi dinner\n\n💰 Estimated cost: E350–500 total\n🏨 Recommended stay: Mantengha Cultural Village";
     if(m.includes('waterfall')||m.includes('falls')) return "🌊 Best waterfalls in Eswatini:\n\n1. Mantenga Falls — 95m drop, most accessible, Ezulwini Valley\n2. Phophonyane Falls — pristine wilderness, great for hiking\n3. Maguga Dam area — scenic waterfall views\n4. Mlilwane Wildlife Falls — inside the sanctuary\n\nBest time to visit: After the rainy season (Nov–Mar) for maximum flow!\n\nTap Navigate to get directions to any of these. 🗺️";
     if(m.includes('food')||m.includes('eat')||m.includes('restaurant')) return "🍽 Must-try Swazi foods:\n\n• Sishwala — thick maize porridge (national staple)\n• Umncweba — dried Swazi meat, like biltong\n• Emasi — soured milk served with rice\n• Tjwala — traditional fermented Swazi beer\n• Sidvudvu — pumpkin porridge\n\n🏆 Top restaurants:\n1. Malandela's — traditional cuisine in Malkerns\n2. Tum's George Hotel — fine dining in Mbabane\n3. Foresters Arms — country pub in Malkerns\n\nTap Restaurants on the home screen to book! 🍴";
